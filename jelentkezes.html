@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelentkezés - 815. IV. Béla Király Cscs.</title>
+
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="js.js" defer></script>
+</head>
+<body>
+    <header class="form-header">
+        <h1>Jelentkezés a csapatba</h1>
+    </header>
+    <main class="form-main">
+        <section class="kicsi"><p>A jelentkezéshez kérjük töltse ki az alábbi űrlapot.</p></section>
+        <section class="visszagomb">
+            <a id="vissza" href="fooldal.html">Vissza a főoldalra</a>
+        </section>
+        <section class="form-test">
+
+            <form id="jelentkezesForm" action="https://httpbin.org/post" method="post">
+
+                <div class="form-kerdes">
+                    <label for="csaladnev">Család neve</label>
+                    <input type="text" id="csaladnev" name="csaladnev" placeholder="Pl. Szabó">
+                    <div id="error-csaladnev" class="error-msg"></div>
+                </div>
+
+                <div class="form-kerdes">
+                    <label for="gyermekneve">Gyermek neve</label>
+                    <input type="text" id="nev" name="nev" placeholder="Pl. Szabó Ádám">
+                    <div id="error-nev" class="error-msg"></div>
+                </div>
+
+                <div class="form-kerdes">
+                    <label for="lakcim">Család lakcíme</label>
+                    <input type="text" id="cim" name="cim" placeholder="Pl. 1093 Budapest, Fővám tér 8.">
+                    <div id="error-cim" class="error-msg"></div>
+                </div>
+
+                <div class="form-kerdes">
+                    <label for="szulonev">Szülő1 születési neve</label>
+                    <input type="text" id="szulonev" name="szulonev" placeholder="Pl. Szabó Péter">
+                    <div id="error-szulonev" class="error-msg"></div>
+                </div>
+
+                <div class="form-kerdes">
+                    <label for="szuloemail">Szülő1 e-mail címe</label>
+                    <input type="email" id="szuloemail" name="szuloemail" placeholder="Pl. szabopeter@gmail.com">
+                    <div id="error-szuloemail" class="error-msg"></div>
+                </div>
+
+                <div class="form-kerdes">
+                    <label for="szulotelefon">Szülő1 telefonszáma</label>
+                    <input type="number" id="szulotelefon" name="szulotelefon" placeholder="Pl. +36301234567">
+                    <div id="error-szulotelefon" class="error-msg"></div>
+                </div>
+
+                <div class="form-kerdes">
+                    <label for="szuletes">Gyermek születési dátuma</label>
+                    <input type="date" id="szuletes" name="szuletes">
+                    <div id="error-szuletes" class="error-msg"></div>
+                </div>
+
+                <div class="form-kerdes">
+                    <label for="taj">Gyermek TAJ száma</label>
+                    <input type="text" id="taj" name="taj" placeholder="Pl. 123456789">
+                    <div id="error-taj" class="error-msg"></div>
+                </div>
+
+                <div class="form-kerdes">
+                    <label for="diak">Gyermek diákigazolvány száma (11 számjegyű)</label>
+                    <input type="text" id="diak" name="diak" placeholder="Pl. 12345678901">
+                    <div id="error-diak" class="error-msg"></div>
+                </div>
+
+                <button id="kuldes" type="submit" class="submit-btn">Jelentkezés küldése</button>
+
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>

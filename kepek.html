@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Képek - 815. IV. Béla Király Cscs.</title>
+
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="js.js" defer></script>
+    <script src="interactive.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="logo"><a href="fooldal.html" class="gomb-815">815</a> / Képek</h1>
+        
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu-list">
+            <span class="hamburger-icon">☰</span> 
+        </button>
+
+        <nav class="mobile-nav" id="main-menu-list">
+            <ul class="main-menu">
+                <li><a href="bemutatkozas.html"><strong>Bemutatkozás</strong></a></li>
+                <li><a href="csapatunk felepitese.html"><strong>Csapatunk felépítése</strong></a></li>
+                <li><a href="jelentkezes.html"><strong>Jelentkezés</strong></a></li>
+                <li><a href="kepek.html"><strong>Képek</strong></a></li>
+                <li><a href="elerhetoseg.html"><strong>Elérhetőség</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="album-container">
+            <h2>Képgaléria</h2>
+
+            <div id="mappaValaszto" class="galeria-stage">
+                <p>Válassz a kategóriák közül a képek megtekintéséhez:</p>
+
+                <div class="mappa-grid">
+                    <div class="mappa-kartya" data-album="raji">
+                        <h3>Raji program (Csillagösvény)</h3>
+                        <img src="img/raji_thumb.jpeg" alt="Raji program">
+                    </div>
+                    <div class="mappa-kartya" data-album="kirandulas">
+                        <h3>Családos kirándulás</h3>
+                        <img src="img/kirandulas_thumb.jpeg" alt="Kirándulás">
+                    </div>
+                    <div class="mappa-kartya" data-album="tabor">
+                        <h3>Tábor</h3>
+                        <img src="img/tabor_thumb.jpeg" alt="Tábor">
+                    </div>
+                </div>
+            </div>
+
+            <div id="galeriaNezet" class="galeria-stage rejtett">
+                <button id="visszaMappakhoz" class="back-btn">← Vissza a mappákhoz</button>
+                
+                <h3 id="galeriaCim">Album címe</h3>
+                
+                <div id="kiskepKontener" class="kiskep-grid">
+                    </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="lightbox" class="lightbox rejtett">
+        <span id="lightboxBezaras" class="lightbox-close">✕</span>
+        
+        <div class="lightbox-content">
+            <button id="lightboxElőző" class="lightbox-nav nav-prev">‹</button>
+            <img id="nagyKep" src="" alt="Nagyított kép" class="lightbox-img">
+            <button id="lightboxKövetkező" class="lightbox-nav nav-next">›</button>
+        </div>
+        
+        <div id="lightboxCimke" class="lightbox-caption"></div>
+    </div>
+    </main>
+    <footer>
+        <section class="footer">
+            <p>815. IV. Béla Király cserkészcsapat</p>
+            <p class="vastag">Kérdés esetén forduljanak hozzánk bizalommal!</p>
+            <p>Elérhetőség: Tarpataki Zsombor, csapatparancsnok</p>
+            <p>e-mail: tarpataki.zsombor@cserkesz.hu</p>
+            <p>telefon: +36 30 407 8778</p>
+        </section>
+    </footer>
+</body>
+</html>
